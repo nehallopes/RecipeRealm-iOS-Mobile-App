@@ -104,7 +104,7 @@ class RecipeDetailViewController: UIViewController, UIScrollViewDelegate {
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.addValue("kw7OU3OULL3zZKqeT77zTPL93czINm3gpsv5r7kChz6TxN7Te6DBPfM6", forHTTPHeaderField: "Authorization")
+        request.addValue("API KEY", forHTTPHeaderField: "Authorization")
 
         let task = URLSession.shared.dataTask(with: request) { [weak self] (data, response, error) in
             guard let data = data, error == nil else {
